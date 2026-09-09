@@ -57,6 +57,11 @@ jobs:
           pip install -r requirements.txt
           python -c "import futu; print('✅ futu SDK import OK')"
       
+      - name: 安装 Markdown 转图片工具
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wkhtmltopdf fonts-noto-cjk
+      
       - name: 创建必要目录
         run: |
           mkdir -p data logs reports
@@ -300,6 +305,7 @@ jobs:
           # 搜索服务
           # ==========================================
           ANSPIRE_API_KEYS: ${{ secrets.ANSPIRE_API_KEYS }} 
+          MARKDOWN_TO_IMAGE_CHANNELS: ${{ vars.MARKDOWN_TO_IMAGE_CHANNELS || secrets.MARKDOWN_TO_IMAGE_CHANNELS || '' }}          
           ANSPIRE_LLM_MODEL: ${{ vars.ANSPIRE_LLM_MODEL || secrets.ANSPIRE_LLM_MODEL }}
           ANSPIRE_LLM_BASE_URL: ${{ vars.ANSPIRE_LLM_BASE_URL || secrets.ANSPIRE_LLM_BASE_URL }}
           ANSPIRE_LLM_ENABLED: ${{ vars.ANSPIRE_LLM_ENABLED || secrets.ANSPIRE_LLM_ENABLED }}
