@@ -185,11 +185,11 @@ def _markdown_to_image_wkhtml(
             branding=branding,
         )
         options = {
-            "format": "png",
+            "format": "jpg",
             "encoding": "UTF-8",
             "width": 1080,
             "disable-smart-width": "",
-            "quality": 95,
+            "quality": 65,
             "quiet": "",
         }
         out = imgkit.from_string(html, False, options=options)
