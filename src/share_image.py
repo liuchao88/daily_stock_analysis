@@ -24,10 +24,10 @@ import markdown2
 
 
 PROJECT_URL = "https://github.com/ZhuLinsen/daily_stock_analysis"
-PROJECT_REPOSITORY = "ZhuLinsen/daily_stock_analysis"
+PROJECT_REPOSITORY = "liuchao88/daily_stock_analysis"
 PROJECT_DISPLAY_NAME = "股票智能分析系统"
-DEFAULT_XIAOHONGSHU_QR_PATH = "src/assets/share_image/xiaohongshu_qr.jpg"
-DEFAULT_XIAOHONGSHU_HANDLE = "@霸天土小豆"
+DEFAULT_XIAOHONGSHU_QR_PATH = ""
+DEFAULT_XIAOHONGSHU_HANDLE = ""
 _MARKET_RE = re.compile(
     r"(?:大盘复盘|市场复盘|market\s+(?:review|recap)|시황\s*리뷰)", re.IGNORECASE
 )
